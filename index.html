@@ -53,42 +53,6 @@
         <script src="//fast.eager.io/AJW50NEJCO.js"></script>
 
 
-        <!-- Draggable Image JS Class -->
-
-        <style>
-            <!--
-            .drag{position:relative;cursor:hand}
-            -->
-        </style>
-        <script language="JavaScript1.2">
-            <!--
-            var dragapproved = false;
-            var z, x, y;
-            function move() {
-                if (event.button === 1 && dragapproved) {
-                    z.style.pixelLeft = temp1 + event.clientX - x;
-                    z.style.pixelTop = temp2 + event.clientY - y;
-                    return false;
-                }
-            }
-            function drags() {
-                if (!document.all)
-                    return;
-                if (event.srcElement.className === "drag") {
-                    dragapproved = true;
-                    z = event.srcElement;
-                    temp1 = z.style.pixelLeft;
-                    temp2 = z.style.pixelTop;
-                    x = event.clientX;
-                    y = event.clientY;
-                    document.onmousemove = move;
-                }
-            }
-            document.onmousedown = drags;
-            document.onmouseup = new Function("dragapproved=false")
-                    //-->
-        </script>
-        <!-- End of Drag JS Class -->
 
 
     </head>
@@ -110,21 +74,21 @@
                             </canvas>
                         </div>
                         <script>
-                                    function BG_Change() {
-                                        if ($('#who_am_i').hasClass('BG_No-Color')) {
-                                            $("#who_am_i").removeClass('BG_No-Color').addClass('BG_Colored');
-                                        }
-                                        else if ($('#who_am_i').hasClass('BG_Colored')) {
-                                            $("#who_am_i").removeClass('BG_Colored').addClass('BG_No-Color');
-                                        }
+                            function BG_Change() {
+                                if ($('#who_am_i').hasClass('BG_No-Color')) {
+                                    $("#who_am_i").removeClass('BG_No-Color').addClass('BG_Colored');
+                                }
+                                else if ($('#who_am_i').hasClass('BG_Colored')) {
+                                    $("#who_am_i").removeClass('BG_Colored').addClass('BG_No-Color');
+                                }
 
-                                        if ($('#canvas').hasClass('img-old')) {
-                                            $("#canvas").removeClass('img-old').addClass('img-restore');
-                                        }
-                                        else if ($('#canvas').hasClass('img-restore')) {
-                                            $("#canvas").removeClass('img-restore').addClass('img-old');
-                                        }
-                                    }
+                                if ($('#canvas').hasClass('img-old')) {
+                                    $("#canvas").removeClass('img-old').addClass('img-restore');
+                                }
+                                else if ($('#canvas').hasClass('img-restore')) {
+                                    $("#canvas").removeClass('img-restore').addClass('img-old');
+                                }
+                            }
                         </script>
                         <div class="col-sm-offset-2 col-sm-8 col-sm-offset-2 text-center">
                             <h1 class="intro">Cary Bondoc</h1>
@@ -147,21 +111,24 @@
 
                                 <script type="text/javascript">
 
-                                            function openPdf(e, path, redirect) {
-                                                // stop the browser from going to the href
-                                                e = e || window.event; // for IE
-                                                e.preventDefault();
+                                    function openPdf(e, path, redirect) {
+                                        // stop the browser from going to the href
+                                        e = e || window.event; // for IE
+                                        e.preventDefault();
 
-                                                // launch a new window with your PDF
-                                                window.open(path, 'Bondoc_Cary-Resume', .../* options */);
-                                                        // redirect current page to new location
-                                                        window.location = redirect;
-                                            }
+                                        // launch a new window with your PDF
+                                        window.open(path, 'Bondoc_Cary-Resume', .../* options */);
+                                                // redirect current page to new location
+                                                window.location = redirect;
+                                    }
 
                                 </script>
                             </div>
-                            <div class="col-sm-6 text-center">
-
+                            <div class="col-sm-3 text-center">
+                                <a href="downloads/Login_Sample.rar" download>
+                                    <span class="glyphicon glyphicon-file"></span><br />
+                                    Download Login Tutorials
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -226,7 +193,7 @@
 
                             <div class="col-sm-12 text-center">
                                 <!-- StackOverflow Badge -->
-                                <img src="http://stackexchange.com/users/flair/3526473.png" class="drag" width="345" height="115" alt="profile for Cary Bondoc on Stack Exchange, a network of free, community-driven Q&amp;A sites" title="profile for Cary Bondoc on Stack Exchange, a network of free, community-driven Q&amp;A sites">
+                                <img src="http://stackexchange.com/users/flair/3526473.png" width="345" height="115" alt="profile for Cary Bondoc on Stack Exchange, a network of free, community-driven Q&amp;A sites" title="profile for Cary Bondoc on Stack Exchange, a network of free, community-driven Q&amp;A sites">
 
                                 <!-- Stack Overflow Badge End-->
                             </div>
@@ -236,19 +203,19 @@
             </div>
 
             <script>
-                        window.setInterval(yourfunction, 3000);
+                window.setInterval(yourfunction, 3000);
 
-                        function yourfunction() {
-                            if ($('.BG_Default').hasClass('BG_First')) {
-                                $(".BG_Default").removeClass('BG_First').addClass('BG_Second');
-                            }
-                            else if ($('.BG_Default').hasClass('BG_Second')) {
-                                $(".BG_Default").removeClass('BG_Second').addClass('BG_Third');
-                            }
-                            else if ($('.BG_Default').hasClass('BG_Third')) {
-                                $(".BG_Default").removeClass('BG_Third').addClass('BG_First');
-                            }
-                        }
+                function yourfunction() {
+                    if ($('.BG_Default').hasClass('BG_First')) {
+                        $(".BG_Default").removeClass('BG_First').addClass('BG_Second');
+                    }
+                    else if ($('.BG_Default').hasClass('BG_Second')) {
+                        $(".BG_Default").removeClass('BG_Second').addClass('BG_Third');
+                    }
+                    else if ($('.BG_Default').hasClass('BG_Third')) {
+                        $(".BG_Default").removeClass('BG_Third').addClass('BG_First');
+                    }
+                }
             </script>
 
 
@@ -267,183 +234,181 @@
 
 
 // This example adds an animated symbol to a polyline
-                        // TESTING ONLY: show how many markers? must be less than 200
-                        var howMany = 200;
+                // TESTING ONLY: show how many markers? must be less than 200
+                var howMany = 200;
 
-                        // when there are many markers, limit the length of total
-                        // animation: all markers should drop within at most 
-                        // this many seconds
-                        var maxWait = 5; // choose value between 5-15 seconds
-                        // when few markers are shown, the delay between each drop
-                        var maxDelay = 1000; // choose value around 200 ms;
-                        // animation runs top to bottom, compares latitude in subarrays
-                        var latitudeSort = function(a, b) {
-                            return b[1] - a[1];
-                        };
+                // when there are many markers, limit the length of total
+                // animation: all markers should drop within at most 
+                // this many seconds
+                var maxWait = 5; // choose value between 5-15 seconds
+                // when few markers are shown, the delay between each drop
+                var maxDelay = 1000; // choose value around 200 ms;
+                // animation runs top to bottom, compares latitude in subarrays
+                var latitudeSort = function (a, b) {
+                    return b[1] - a[1];
+                };
 
-                        var sitesIcon = 'http://labs.google.com/ridefinder/images/mm_20_red.png';
+                var sitesIcon = 'http://labs.google.com/ridefinder/images/mm_20_red.png';
 
 
-                        var infowindow = null;
-                        $(document).ready(function() {
-                            initialize();
+                var infowindow = null;
+                $(document).ready(function () {
+                    initialize();
+                });
+
+                var line;
+                var lines = [];
+                var myLatlng = new google.maps.LatLng(41.7833, 5.2167);
+                var marker;
+
+                var styles = [
+                    {"featureType": "landscape", "stylers": [{"visibility": "on"}, {"color": "#e7cd79"}, {"weight": 0.1}]}, {"featureType": "water", "stylers": [{"visibility": "simplified"}, {"color": "#282828"}]}, {"featureType": "landscape.natural.landcover", "elementType": "geometry", "stylers": [{"visibility": "on"}, {"color": "#d6bc68"}]}, {"featureType": "administrative.locality", "elementType": "geometry", "stylers": [{"visibility": "off"}, {"color": "#d6bc68"}]}, {"featureType": "road.arterial", "elementType": "geometry", "stylers": [{"visibility": "on"}, {"color": "#d6bc68"}]}, {"featureType": "poi", "elementType": "all", "stylers": [{"visibility": "on"}, {"color": "#d6bc68"}]}, {"featureType": "transit.station.airport", "elementType": "geometry.fill", "stylers": [{"visibility": "off"}, {"color": "#d6bc68"}]}, {"featureType": "poi"}, {"featureType": "transit.line", "stylers": [{"color": "#d6bc68"}, {"visibility": "on"}]}, {"featureType": "road", "elementType": "geometry.stroke", "stylers": [{"visibility": "off"}, {"weight": 1}, {"color": "#e9d9a6"}]}, {"featureType": "road", "elementType": "geometry", "stylers": [{"visibility": "simplified"}, {"color": "#e9d9a6"}]}, {"featureType": "road.highway", "elementType": "geometry", "stylers": [{"visibility": "simplified"}, {"color": "#e9d9a6"}]}, {"featureType": "poi.business", "stylers": [{"color": "#e9d9a6"}, {"visibility": "on"}]}, {}, {"featureType": "poi.government", "stylers": [{"visibility": "off"}]}, {"featureType": "poi.school", "stylers": [{"visibility": "off"}]}, {"featureType": "administrative", "stylers": [{"visibility": "off"}]}, {"featureType": "poi.medical", "stylers": [{"visibility": "off"}]}, {"featureType": "poi.attraction", "elementType": "geometry", "stylers": [{"visibility": "off"}, {"color": "#cfb665"}]}, {"featureType": "poi.place_of_worship", "stylers": [{"visibility": "off"}]}, {"featureType": "poi.sports_complex", "stylers": [{"visibility": "off"}]}, {}, {"featureType": "road.arterial", "elementType": "labels.text.stroke", "stylers": [{"color": "#cfb665"}, {"visibility": "off"}]}, {"featureType": "road.highway", "elementType": "labels.text", "stylers": [{"visibility": "off"}]}, {"featureType": "road.highway.controlled_access", "stylers": [{"visibility": "off"}]}, {"featureType": "road"}
+                ]
+
+                function initialize() {
+                    var centerMap = new google.maps.LatLng(31.9573997, 117.3473038);
+
+                    var mapOptions = {
+                        opacity: 0.2,
+                        disableDefaultUI: true,
+                        draggable: true,
+                        styles: styles,
+                        zoom: 3,
+                        center: centerMap,
+                        mapTypeId: google.maps.MapTypeId.ROADMAP,
+                        scrollwheel: false,
+                        disableDoubleClickZoom: true
+                    };
+
+
+
+                    map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);
+
+                    google.maps.event.addListenerOnce(map, 'tilesloaded', function () {
+                        setMarkers(map, sites);
+                    });
+                    infowindow = new google.maps.InfoWindow({
+                        content: "loading..."
+                    });
+
+                    var domain = [new google.maps.LatLng(53.409736, 83.364217)];
+
+                    var lineCoordinates = [
+                        new google.maps.LatLng(34.2777032, 100.4238387),
+                        new google.maps.LatLng(46.4906673, 15.3754774),
+                        new google.maps.LatLng(60.5380362, 10.4942311),
+                        new google.maps.LatLng(57.409736, 140.364217),
+                        new google.maps.LatLng(40.0368483, 60.2167457)
+
+                    ];
+
+                    var planeSymbol = {
+                        path: 'M362.985,430.724l-10.248,51.234l62.332,57.969l-3.293,26.145 l-71.345-23.599l-2.001,13.069l-2.057-13.529l-71.278,22.928l-5.762-23.984l64.097-59.271l-8.913-51.359l0.858-114.43 l-21.945-11.338l-189.358,88.76l-1.18-32.262l213.344-180.08l0.875-107.436l7.973-32.005l7.642-12.054l7.377-3.958l9.238,3.65 l6.367,14.925l7.369,30.363v106.375l211.592,182.082l-1.496,32.247l-188.479-90.61l-21.616,10.087l-0.094,115.684',
+                        scale: 0.0500, //size of the airplane
+                        strokeOpacity: 1,
+                        color: '#000000',
+                        strokeWeight: 2
+                    };
+
+                    for (i = 0; i < lineCoordinates.length; i++) {
+
+                        line = new google.maps.Polyline({
+                            strokeColor: '#000000',
+                            strokeOpacity: 0.00001,
+                            strokeWeight: 0,
+                            path: [lineCoordinates[i], domain[0]],
+                            geodesic: true,
+                            icons: [{
+                                    icon: planeSymbol
+                                }]
                         });
-
-                        var line;
-                        var lines = [];
-                        var myLatlng = new google.maps.LatLng(41.7833, 5.2167);
-                        var marker;
-
-                        var styles = [
-                            {"featureType": "landscape", "stylers": [{"visibility": "on"}, {"color": "#e7cd79"}, {"weight": 0.1}]}, {"featureType": "water", "stylers": [{"visibility": "simplified"}, {"color": "#282828"}]}, {"featureType": "landscape.natural.landcover", "elementType": "geometry", "stylers": [{"visibility": "on"}, {"color": "#d6bc68"}]}, {"featureType": "administrative.locality", "elementType": "geometry", "stylers": [{"visibility": "off"}, {"color": "#d6bc68"}]}, {"featureType": "road.arterial", "elementType": "geometry", "stylers": [{"visibility": "on"}, {"color": "#d6bc68"}]}, {"featureType": "poi", "elementType": "all", "stylers": [{"visibility": "on"}, {"color": "#d6bc68"}]}, {"featureType": "transit.station.airport", "elementType": "geometry.fill", "stylers": [{"visibility": "off"}, {"color": "#d6bc68"}]}, {"featureType": "poi"}, {"featureType": "transit.line", "stylers": [{"color": "#d6bc68"}, {"visibility": "on"}]}, {"featureType": "road", "elementType": "geometry.stroke", "stylers": [{"visibility": "off"}, {"weight": 1}, {"color": "#e9d9a6"}]}, {"featureType": "road", "elementType": "geometry", "stylers": [{"visibility": "simplified"}, {"color": "#e9d9a6"}]}, {"featureType": "road.highway", "elementType": "geometry", "stylers": [{"visibility": "simplified"}, {"color": "#e9d9a6"}]}, {"featureType": "poi.business", "stylers": [{"color": "#e9d9a6"}, {"visibility": "on"}]}, {}, {"featureType": "poi.government", "stylers": [{"visibility": "off"}]}, {"featureType": "poi.school", "stylers": [{"visibility": "off"}]}, {"featureType": "administrative", "stylers": [{"visibility": "off"}]}, {"featureType": "poi.medical", "stylers": [{"visibility": "off"}]}, {"featureType": "poi.attraction", "elementType": "geometry", "stylers": [{"visibility": "off"}, {"color": "#cfb665"}]}, {"featureType": "poi.place_of_worship", "stylers": [{"visibility": "off"}]}, {"featureType": "poi.sports_complex", "stylers": [{"visibility": "off"}]}, {}, {"featureType": "road.arterial", "elementType": "labels.text.stroke", "stylers": [{"color": "#cfb665"}, {"visibility": "off"}]}, {"featureType": "road.highway", "elementType": "labels.text", "stylers": [{"visibility": "off"}]}, {"featureType": "road.highway.controlled_access", "stylers": [{"visibility": "off"}]}, {"featureType": "road"}
-                        ]
-
-
-
-
-
-                        function initialize() {
-                            var centerMap = new google.maps.LatLng(31.9573997, 117.3473038);
-
-                            var mapOptions = {
-                                opacity: 0.2,
-                                disableDefaultUI: true,
-                                draggable: true,
-                                styles: styles,
-                                zoom: 3,
-                                center: centerMap,
-                                mapTypeId: google.maps.MapTypeId.ROADMAP,
-                                scrollwheel: false,
-                                disableDoubleClickZoom: true
-                            };
-
-
-
-                            map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);
-
-                            google.maps.event.addListenerOnce(map, 'tilesloaded', function() {
-                                setMarkers(map, sites);
-                            });
-                            infowindow = new google.maps.InfoWindow({
-                                content: "loading..."
-                            });
-
-                            var domain = [new google.maps.LatLng(53.409736, 83.364217)];
-
-                            var lineCoordinates = [
-                                new google.maps.LatLng(34.2777032, 100.4238387),
-                                new google.maps.LatLng(46.4906673, 15.3754774),
-                                new google.maps.LatLng(60.5380362, 10.4942311),
-                                new google.maps.LatLng(57.409736, 140.364217),
-                                new google.maps.LatLng(40.0368483, 60.2167457)
-
-                            ];
-
-                            var planeSymbol = {
-                                path: 'M362.985,430.724l-10.248,51.234l62.332,57.969l-3.293,26.145 l-71.345-23.599l-2.001,13.069l-2.057-13.529l-71.278,22.928l-5.762-23.984l64.097-59.271l-8.913-51.359l0.858-114.43 l-21.945-11.338l-189.358,88.76l-1.18-32.262l213.344-180.08l0.875-107.436l7.973-32.005l7.642-12.054l7.377-3.958l9.238,3.65 l6.367,14.925l7.369,30.363v106.375l211.592,182.082l-1.496,32.247l-188.479-90.61l-21.616,10.087l-0.094,115.684',
-                                scale: 0.0500, //size of the airplane
-                                strokeOpacity: 1,
-                                color: '#000000',
-                                strokeWeight: 2
-                            };
-
-                            for (i = 0; i < lineCoordinates.length; i++) {
-
-                                line = new google.maps.Polyline({
-                                    strokeColor: '#000000',
-                                    strokeOpacity: 0.00001,
-                                    strokeWeight: 0,
-                                    path: [lineCoordinates[i], domain[0]],
-                                    geodesic: true,
-                                    icons: [{
-                                            icon: planeSymbol
-                                        }]
-                                });
-                                line.setMap(map);
-                                lines.push(line);
-                            } //end of for loop
+                        line.setMap(map);
+                        lines.push(line);
+                    } //end of for loop
 // alert(lines.length);
-                            animate();
+                    animate();
 
+                }
+
+
+                function animate() {
+                    var count = 0;
+                    offsetId = window.setInterval(function () {
+                        count = (count + 1) % 2000;
+                        for (var i = 0; i < lines.length; i++) {
+                            var icons = lines[i].get('icons');
+                            icons[0].offset = (count / 2) + '%';
+                            lines[i].set('icons', icons);
                         }
+                    }, 200);
+
+                    count = 0;
 
 
-                        function animate() {
-                            var count = 0;
-                            offsetId = window.setInterval(function() {
-                                count = (count + 1) % 2000;
-                                for (var i = 0; i < lines.length; i++) {
-                                    var icons = lines[i].get('icons');
-                                    icons[0].offset = (count / 2) + '%';
-                                    lines[i].set('icons', icons);
-                                }
-                            }, 200);
+                }// end of animate function
 
-                            count = 0;
+                function setMarkers(map, markers) {
+                    // TESTING ONLY, remove later
+                    markers.splice(0, 200 - howMany);
+
+                    markers.sort(latitudeSort);
+
+                    for (var i = 0; i < markers.length; i++) {
+                        var sites = markers[i];
+                        var siteLatLng = new google.maps.LatLng(sites[1], sites[2]);
+                        (function (i, siteLatLng, sites) {
+                            setTimeout(function () {
+                                var marker = new google.maps.Marker({
+                                    position: siteLatLng,
+                                    map: map,
+                                    title: sites[0],
+                                    zIndex: sites[3],
+                                    html: sites[4],
+                                    icon: sitesIcon,
+                                    animation: google.maps.Animation.DROP
+                                });
+
+                                google.maps.event.addListener(marker, "click", function () {
+                                    infowindow.setContent(this.html);
+                                    infowindow.open(map, this);
+                                });
+                            }, i * Math.min(maxWait * 1000 / markers.length, maxDelay));
+                        }(i, siteLatLng, sites));
+                    }
+                }
+
+                var sites = [
+                    ['Sample', 55.409736, 83.364217, 1, '<p>Sample</p></br>'],
+                    ['Sample', 56.409736, 81.364217, 1, '<p>Sample</p></br>'],
+                    ['Sample', 57.409736, 79.364217, 1, '<p>Sample</p></br>'],
+                    ['Sample', 58.409736, 77.364217, 1, '<p>Sample</p></br>'],
+                    ['Sample', 58.409736, 75.364217, 1, '<p>Sample</p></br>'],
+                    ['Sample', 58.409736, 73.364217, 1, '<p>Sample</p></br>'],
+                    ['Sample', 57.409736, 71.364217, 1, '<p>Sample</p></br>'],
+                    ['Sample', 56.409736, 71.364217, 1, '<p>Sample</p></br>'],
+                    ['Sample', 54.409736, 73.364217, 1, '<p>Sample</p></br>'],
+                    ['Sample', 53.409736, 75.364217, 1, '<p>Sample</p></br>'],
+                    ['Sample', 52.409736, 77.364217, 1, '<p>Sample</p></br>'],
+                    ['Sample', 51.409736, 79.364217, 1, '<p>Sample</p></br>'],
+                    ['Sample', 50.409736, 81.364217, 1, '<p>Sample</p></br>'],
+                    ['Sample', 49.409736, 83.364217, 1, '<p>Sample</p></br>'], //center of the heart
+                    ['Sample', 50.409736, 85.364217, 1, '<p>Sample</p></br>'],
+                    ['Sample', 51.409736, 87.364217, 1, '<p>Sample</p></br>'],
+                    ['Sample', 52.409736, 89.364217, 1, '<p>Sample</p></br>'],
+                    ['Sample', 53.409736, 91.364217, 1, '<p>Sample</p></br>'],
+                    ['Sample', 54.409736, 93.364217, 1, '<p>Sample</p></br>'],
+                    ['Sample', 56.409736, 95.364217, 1, '<p>Sample</p></br>'],
+                    ['Sample', 57.409736, 95.364217, 1, '<p>Sample</p></br>'],
+                    ['Sample', 58.409736, 93.364217, 1, '<p>Sample</p></br>'],
+                    ['Sample', 58.409736, 91.364217, 1, '<p>Sample</p></br>'],
+                    ['Sample', 58.409736, 89.364217, 1, '<p>Sample</p></br>'],
+                    ['Sample', 57.409736, 87.364217, 1, '<p>Sample</p></br>'],
+                    ['Sample', 56.409736, 85.364217, 1, '<p>Sample</p></br>'],
+                    ['Sample', 55.409736, 83.364217, 1, '<p>Sample</p></br>']
+                ];
+                //]]>
 
 
-                        }// end of animate function
-
-                        function setMarkers(map, markers) {
-                            // TESTING ONLY, remove later
-                            markers.splice(0, 200 - howMany);
-
-                            markers.sort(latitudeSort);
-
-                            for (var i = 0; i < markers.length; i++) {
-                                var sites = markers[i];
-                                var siteLatLng = new google.maps.LatLng(sites[1], sites[2]);
-                                (function(i, siteLatLng, sites) {
-                                    setTimeout(function() {
-                                        var marker = new google.maps.Marker({
-                                            position: siteLatLng,
-                                            map: map,
-                                            title: sites[0],
-                                            zIndex: sites[3],
-                                            html: sites[4],
-                                            icon: sitesIcon,
-                                            animation: google.maps.Animation.DROP
-                                        });
-
-                                        google.maps.event.addListener(marker, "click", function() {
-                                            infowindow.setContent(this.html);
-                                            infowindow.open(map, this);
-                                        });
-                                    }, i * Math.min(maxWait * 1000 / markers.length, maxDelay));
-                                }(i, siteLatLng, sites));
-                            }
-                        }
-
-                        var sites = [
-                            ['Sample', 55.409736, 83.364217, 1, '<p>Sample</p></br>'],
-                            ['Sample', 56.409736, 81.364217, 1, '<p>Sample</p></br>'],
-                            ['Sample', 57.409736, 79.364217, 1, '<p>Sample</p></br>'],
-                            ['Sample', 58.409736, 77.364217, 1, '<p>Sample</p></br>'],
-                            ['Sample', 58.409736, 75.364217, 1, '<p>Sample</p></br>'],
-                            ['Sample', 58.409736, 73.364217, 1, '<p>Sample</p></br>'],
-                            ['Sample', 57.409736, 71.364217, 1, '<p>Sample</p></br>'],
-                            ['Sample', 56.409736, 71.364217, 1, '<p>Sample</p></br>'],
-                            ['Sample', 54.409736, 73.364217, 1, '<p>Sample</p></br>'],
-                            ['Sample', 53.409736, 75.364217, 1, '<p>Sample</p></br>'],
-                            ['Sample', 52.409736, 77.364217, 1, '<p>Sample</p></br>'],
-                            ['Sample', 51.409736, 79.364217, 1, '<p>Sample</p></br>'],
-                            ['Sample', 50.409736, 81.364217, 1, '<p>Sample</p></br>'],
-                            ['Sample', 49.409736, 83.364217, 1, '<p>Sample</p></br>'], //center of the heart
-                            ['Sample', 50.409736, 85.364217, 1, '<p>Sample</p></br>'],
-                            ['Sample', 51.409736, 87.364217, 1, '<p>Sample</p></br>'],
-                            ['Sample', 52.409736, 89.364217, 1, '<p>Sample</p></br>'],
-                            ['Sample', 53.409736, 91.364217, 1, '<p>Sample</p></br>'],
-                            ['Sample', 54.409736, 93.364217, 1, '<p>Sample</p></br>'],
-                            ['Sample', 56.409736, 95.364217, 1, '<p>Sample</p></br>'],
-                            ['Sample', 57.409736, 95.364217, 1, '<p>Sample</p></br>'],
-                            ['Sample', 58.409736, 93.364217, 1, '<p>Sample</p></br>'],
-                            ['Sample', 58.409736, 91.364217, 1, '<p>Sample</p></br>'],
-                            ['Sample', 58.409736, 89.364217, 1, '<p>Sample</p></br>'],
-                            ['Sample', 57.409736, 87.364217, 1, '<p>Sample</p></br>'],
-                            ['Sample', 56.409736, 85.364217, 1, '<p>Sample</p></br>'],
-                            ['Sample', 55.409736, 83.364217, 1, '<p>Sample</p></br>']
-                        ];
-                        //]]>
         </script>
 
         <!-- textillate and bounce.js source-->

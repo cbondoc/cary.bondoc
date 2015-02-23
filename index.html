@@ -38,7 +38,7 @@
         <link rel="stylesheet" href="stylesheets/image-old.css" />
 
 
-
+        <link rel="stylesheet" href="stylesheets/bootstrap.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 
         <!--[if IE]>
@@ -60,7 +60,8 @@
 
         <ul id="menu">
             <li data-menuanchor="who-am-i" class="active"><a href="#who-am-i">Who I am?</a></li>
-            <li data-menuanchor="what-i-did"><a href="#what-i-did">What Can I Do?</a></li>
+            <li data-menuanchor="google-map"><a href="#google-map">Experiments</a></li>
+            <li data-menuanchor="web-templates"><a href="#web-templates">Portfolio</a></li>
             <li data-menuanchor="contact-me"><a href="#contact-me">Contact Me</a></li>
         </ul>
 
@@ -69,7 +70,7 @@
                 <div class="container">
                     <div class="col-md-12">
                         <div class="col-sm-offset-4 col-sm-4 col-sm-offset-4 text-center">
-                            <canvas id="canvas" height="250" width="250" class="img-circle center-block img-responsive img-old wobble-horizontal grow" onclick="BG_Change();" data-toggle="tooltip" data-placement="top" title="Click Me!">
+                            <canvas id="canvas" height="250" width="250" class="img-circle center-block img-responsive img-old grow" onclick="BG_Change();" data-toggle="tooltip" data-placement="top" title="Click Me!">
                                 <!-- The source can be located at javascripts/break-image-onload.js-->
                             </canvas>
                         </div>
@@ -103,33 +104,27 @@
                             </div>
                             <div class="col-sm-3 text-center">
 
-                                <a href="downloads/Bondoc_Cary-Resume.pdf" target="_blank" onclick="openPdf(event, 'downloads/Bondoc_Cary-Resume.pdf', 'newpage.html');">
+                                <a href="downloads/Bondoc_Cary-Resume.pdf" target="_blank" onclick="openPdf(event, 'downloads/Bondoc_Cary-Resume.pdf');">
                                     <span class="glyphicon glyphicon-file"></span><br />
                                     View Resume
                                 </a>
-
+                                
+                                
 
                                 <script type="text/javascript">
 
-                                    function openPdf(e, path, redirect) {
+                                    function openPdf(e, path) {
                                         // stop the browser from going to the href
                                         e = e || window.event; // for IE
                                         e.preventDefault();
 
                                         // launch a new window with your PDF
-                                        window.open(path, 'Bondoc_Cary-Resume', .../* options */);
+                                        window.open(path, 'Bondoc_Cary-Resume');
                                                 // redirect current page to new location
-                                                window.location = redirect;
+                                                //window.location = redirect;
                                     }
-
                                 </script>
-                            </div>
-                            <div class="col-sm-3 text-center">
-                                <a href="downloads/Login_Sample.rar" download>
-                                    <span class="glyphicon glyphicon-file"></span><br />
-                                    Download Login Tutorials
-                                </a>
-                            </div>
+                            </div>                            
                         </div>
                     </div>
                     <div class="col-md-12 text-center">
@@ -137,32 +132,20 @@
                 </div>
             </div>
 
-            <div class="section BG_First BG_Default">
+            <div class="section BG_First">
+                <div id="map_canvas"></div>
+            </div>
 
-                <div class="slide  BG_First BG_Default">
-                    <div class="container">
-                        <div class="col-sm-12">
-                            <h1 class="intro">Some of My Works</h1>
-                        </div>
-                        <div class="col-sm-6">
-                            <h1 class="intro">Google Maps API v.3</h1>
-                        </div>
-                        <div class="col-sm-6">
-                            <h1 class="intro">Some of My Works</h1>
-                        </div>
-
-                    </div>
-
-                </div>
-
-                <div class="slide  BG_First BG_Default">
-                    <div id="map_canvas"></div>
-                </div>
+            <div class="section" id="web_templates">
+                <h1>Lovely images <br />for a lovely page</h1>
             </div>
 
 
 
-            <div class="section">
+
+
+
+            <div class="section" id="contact_me">
                 <div class="col-sm-offset-2 col-sm-8 col-sm-offset-2 text-center">
                     <div class="container">
                         <div class="col-sm-6 text-center   BG_First BG_Default">
@@ -194,7 +177,6 @@
                             <div class="col-sm-12 text-center">
                                 <!-- StackOverflow Badge -->
                                 <img src="http://stackexchange.com/users/flair/3526473.png" width="345" height="115" alt="profile for Cary Bondoc on Stack Exchange, a network of free, community-driven Q&amp;A sites" title="profile for Cary Bondoc on Stack Exchange, a network of free, community-driven Q&amp;A sites">
-
                                 <!-- Stack Overflow Badge End-->
                             </div>
                         </div>
@@ -217,17 +199,9 @@
                     }
                 }
             </script>
-
-
         </div>
 
-
-
-
-
         <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBdTuWJjEUMvQZ6VVPGksE12XNgQgs__Qk&sensor=false&libraries=visualization"></script>
-
-
 
         <script type="text/javascript">//<![CDATA[ 
 
@@ -263,7 +237,7 @@
 
                 var styles = [
                     {"featureType": "landscape", "stylers": [{"visibility": "on"}, {"color": "#e7cd79"}, {"weight": 0.1}]}, {"featureType": "water", "stylers": [{"visibility": "simplified"}, {"color": "#282828"}]}, {"featureType": "landscape.natural.landcover", "elementType": "geometry", "stylers": [{"visibility": "on"}, {"color": "#d6bc68"}]}, {"featureType": "administrative.locality", "elementType": "geometry", "stylers": [{"visibility": "off"}, {"color": "#d6bc68"}]}, {"featureType": "road.arterial", "elementType": "geometry", "stylers": [{"visibility": "on"}, {"color": "#d6bc68"}]}, {"featureType": "poi", "elementType": "all", "stylers": [{"visibility": "on"}, {"color": "#d6bc68"}]}, {"featureType": "transit.station.airport", "elementType": "geometry.fill", "stylers": [{"visibility": "off"}, {"color": "#d6bc68"}]}, {"featureType": "poi"}, {"featureType": "transit.line", "stylers": [{"color": "#d6bc68"}, {"visibility": "on"}]}, {"featureType": "road", "elementType": "geometry.stroke", "stylers": [{"visibility": "off"}, {"weight": 1}, {"color": "#e9d9a6"}]}, {"featureType": "road", "elementType": "geometry", "stylers": [{"visibility": "simplified"}, {"color": "#e9d9a6"}]}, {"featureType": "road.highway", "elementType": "geometry", "stylers": [{"visibility": "simplified"}, {"color": "#e9d9a6"}]}, {"featureType": "poi.business", "stylers": [{"color": "#e9d9a6"}, {"visibility": "on"}]}, {}, {"featureType": "poi.government", "stylers": [{"visibility": "off"}]}, {"featureType": "poi.school", "stylers": [{"visibility": "off"}]}, {"featureType": "administrative", "stylers": [{"visibility": "off"}]}, {"featureType": "poi.medical", "stylers": [{"visibility": "off"}]}, {"featureType": "poi.attraction", "elementType": "geometry", "stylers": [{"visibility": "off"}, {"color": "#cfb665"}]}, {"featureType": "poi.place_of_worship", "stylers": [{"visibility": "off"}]}, {"featureType": "poi.sports_complex", "stylers": [{"visibility": "off"}]}, {}, {"featureType": "road.arterial", "elementType": "labels.text.stroke", "stylers": [{"color": "#cfb665"}, {"visibility": "off"}]}, {"featureType": "road.highway", "elementType": "labels.text", "stylers": [{"visibility": "off"}]}, {"featureType": "road.highway.controlled_access", "stylers": [{"visibility": "off"}]}, {"featureType": "road"}
-                ]
+                ];
 
                 function initialize() {
                     var centerMap = new google.maps.LatLng(31.9573997, 117.3473038);
@@ -329,7 +303,6 @@
                     animate();
 
                 }
-
 
                 function animate() {
                     var count = 0;

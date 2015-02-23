@@ -15,7 +15,7 @@ $(document).ready(function() {
         verticalCentered: true,
         resize: true,
         sectionsColor: [''],
-        anchors: ['who-am-i', 'what-i-did', 'google-map', 'contact-me'],
+        anchors: ['who-am-i', 'google-map', 'web-templates', 'contact-me'],
         scrollingSpeed: 700,
         easing: 'easeInBack',
         menu: '#menu',
@@ -58,13 +58,13 @@ $(document).ready(function() {
             
             if (nextIndex === 2) {
                 setTimeout(function() {
-                    $("#google_map").hide();
+                    $("#google_map").show();
                 }, 650);
             }
             
             if (nextIndex === 3) {
                 setTimeout(function() {
-                    $("#google_map").show();
+                    $("#google_map").hide();
                 }, 650);
             }
             
